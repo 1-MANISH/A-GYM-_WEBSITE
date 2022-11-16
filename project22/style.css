@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&family=Alumni+Sans+Collegiate+One&family=Amatic+SC&family=Bangers&family=Bebas+Neue&family=Blaka+Hollow&family=Bungee+Shade&family=Bungee+Spice&family=Caveat:wght@700&family=Chewy&family=Codystar:wght@300;400&family=Creepster&family=Dawning+of+a+New+Day&family=DynaPuff&family=Fasthand&family=Fredoka+One&family=Gloria+Hallelujah&family=Great+Vibes&family=Inconsolata:wght@200&family=Inspiration&family=Island+Moments&family=Josefin+Sans:wght@300&family=Kanit:wght@100&family=Marck+Script&family=Megrim&family=Mukta:wght@400;700;800&family=Nabla&family=Pacifico&family=Permanent+Marker&family=Poppins:ital,wght@0,500;1,400;1,500&family=Quantico:ital,wght@0,400;0,700;1,400&family=Roboto+Mono&family=Rubik+Burned&family=Rubik+Distressed&family=Satisfy&family=Shadows+Into+Light&family=Silkscreen&family=Splash&family=VT323&family=Yellowtail&family=Yuji+Mai&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+   
+}
+
+:root{
+    --main-bg:#0f0e17;
+    --navIcons:#fffffe;
+    --navSpecial:#fe4567;
+    --card-color:#222525;
+    --card-color-hover:#272343;
+    --bmi_cal_bg:#531705;
+    --dark-icon-f:#fff3ec;
+}
+
+
+body{
+    background-color: var(--main-bg);
+    
+}
+/* -----NavBar------ */
+nav{
+    background-color:var(--main-bg) ;
+    color: white;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.logoIcon{
+    font-size: 2rem;
+    margin: 0 10px;
+    
+}
+.logoText{
+    font-family: 'Codystar', cursive;
+    font-weight: 900;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+.logoText span{
+     color: var(--navSpecial);
+}
+
+.navIcons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navIcons .icons{
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navIcons .icons a{
+    color: var(--navIcons);
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    transition: all 0.5s;
+}
+.navIcons .icons .active{
+    color: var(--navSpecial);
+}
+.navIcons .icons a:hover{
+    color: var(--navSpecial);
+}
+
+.navIcons .regBtn button{
+
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid var(--navSpecial);
+    color: var(--navSpecial);
+    background:none;
+}
+.navIcons .regBtn button:hover{
+    background-color: var(--navSpecial);
+    color: var(--navIcons);
+  
+}
+
+/* --------Home section -----------*/
+
+
+
+#Home{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    color: white;
+    padding: 8vmax;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.h-container{
+    padding: 1vmax;
+    width: 500px;
+
+}
+.h-container h1{
+    font-family: 'Creepster', cursive;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    line-height: 60px;
+}
+.h-container h2{
+    color: var(--navSpecial);
+    font-size: 5rem;
+    letter-spacing: 10px;
+    font-family: 'Creepster', cursive;
+}
+.h-container p{
+    font-family: 'Codystar', cursive;
+    font-size: .7rem;
+    line-height: 30px;
+    font-weight: 900;
+    color: var(--navIcons);
+}
+.h-container .hBtn{
+    margin-top: 50px;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.1rem;
+    border: 1px solid var(--navSpecial);
+    color: var(--navSpecial);
+    background:none;
+    cursor: pointer;
+}
+.h-container .hBtn:hover{
+    color: var(--navIcons);
+    background-color: var(--navSpecial);
+}
+.h-img{
+    width: 550px;
+
+}
+.h-img img{
+    width: 100%;
+}
+/* ---companies---- */
+#company{
+    width: 100vw;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg);
+    color: var(--navIcons);
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+.c-container{
+    font-family: 'VT323', monospace;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.c-item{
+    display: flex;
+    align-items: center;
+}
+.c-item h2{
+    font-size: 1.6rem;
+    letter-spacing: 10px;
+}
+.c-item  span {
+    margin: 0 10px;
+}
+.c-item  span i{
+    font-size: 1.6rem;
+}
+
+
+/* -------------program-------------- */
+
+#Program{
+
+    background-color: var(--main-bg);
+    color: var(--navIcons);
+    min-height: 70vh;
+   
+}
+.p-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.p-container>h3{
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    line-height: 100px;
+}
+.p-container>h1{
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--navSpecial);
+}
+.p-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.p-item{
+    background-color: var(--card-color);
+    font-family: 'Advent Pro', sans-serif;
+    width: 230px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3vmax;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.p-item:hover{
+    background-color: var(--navSpecial);
+}
+.p-item .p-iconImg{
+    font-size: 1.5rem;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.p-item>h3{
+    margin: 10px 0;
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+}
+
+
+/* --------Choose us section ---------- */
+
+#ChooseUs{
+    min-height: 70vh;
+    position: relative;
+    color: white;
+    font-family: 'VT323', monospace;
+    background-color: var(--main-bg);
+}
+
+.ch-container{
+    min-height: 70vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    padding: 4vmax;
+    
+}
+
+.ch-img{
+    width: 30vw;
+}
+.ch-img img{
+    width: 100%;
+}
+.ch-contain{
+    width: 40vw;
+    padding: 4vmax;
+}
+.ch-contain>h4{
+    font-size: 2rem;
+}
+.ch-contain>h1{
+    color: var(--navSpecial);
+    font-size: 4rem;
+}
+.ch-contain>p{
+    font-size: 1.3rem;
+}
+.ch-contain .ch-data{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 200px;
+}
+.ch-contain .ch-data .bx{
+    width: 160px;
+    min-height: 100px;
+
+}
+.ch-contain .ch-data .bx h2{
+
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 3rem;
+}
+.ch-contain .ch-data .bx p{
+    font-size: 1.5rem;
+}
+/* --------pricing --------------- */
+
+#Pricing{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-bg);
+    color: white;
+    
+}
+.pr-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    
+}
+.pr-container>h3{
+    font-size: 2.5rem;
+}
+.pr-container>h1{
+    font-size: 3rem;
+    line-height: 100px;
+    color: var(--navSpecial);
+}
+.pr-contain{
+    width: 100vw;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pr-bx{
+    width: 300px;
+    padding: 2vmax;
+    
+}
+.pr-bx:hover{
+    cursor: pointer;
+}
+.pr-bx .pr-logo{
+    margin: 10px 0;
+}
+.pr-bx .pr-logo span{
+    width: 50px;
+    min-height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pr-bx>h3{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+.pr-bx>h4{
+    font-size: 3rem;
+    margin: 10px 0;
+}
+.pr-feature{
+    padding: 1vmax;
+}
+.priceBtn{
+   
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.priceBtn button{
+    cursor: pointer;
+    font-family: 'Advent Pro', sans-serif;
+    padding: 10px 20px;
+}
+
+.prBx1,.prBx3{
+    background-color: var(--card-color);
+    opacity: 0.8;
+}
+.prBx2{
+    background-color: #fe4567;
+    transform: scale(1.1);
+}
+
+
+/* --------BMI_calculator------- */
+#BMI_calculator{
+    font-family: 'VT323', monospace;
+    min-height: 40vh;
+    background-color: var(--main-bg);
+    color: var(--navIcons);
+}
+.bmi-container{
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bmi-contain{
+    width: 45vw;
+    padding: 2vmax;
+
+}
+.bmi-contain h1{
+    font-size: 4rem;
+    letter-spacing: 10px;
+    margin-bottom: 40px ;
+    color: var(--navSpecial);
+}
+.bmi-contain p{
+    font-size: 1.2rem;
+    margin-bottom: 40px ;
+}
+.bmi_cal{
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.inputs{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs .hBmi{
+    border: .1px solid  var(--navSpecial);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1vmax;
+}
+.inputs .hBmi>input{
+    font-size: 1.2rem;
+    background:none;
+    border: none;
+    outline: none;
+    font-family: 'Advent Pro', sans-serif;
+    padding: 10px 20px;
+    color: var(--navIcons);
+}
+
+.inputs .wBmi{
+
+    border: .1px solid var(--navSpecial);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 1vmax;
+}
+.inputs .wBmi>input{
+    font-size: 1.2rem;
+    background:none;
+    border: none;
+    outline: none;
+    font-family: 'Advent Pro', sans-serif;
+    padding: 10px 20px;
+    color: var(--navIcons);
+}
+
+.bmi_cal .bmiBtn button{
+    width: 100%;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid var(--navSpecial);
+    color: var(--navSpecial);
+    background:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bmi_cal .bmiBtn button:hover{
+    background-color: var(--navSpecial);
+    color: var(--navIcons);
+}
+.bmi-img{
+    width: 20vw;
+}
+.bmi-img img{
+    width: 100%;
+}
+
+
+/* ----footer--------- */
+#contact{
+    border-top: 1px solid var(--navIcons);
+    margin-top: 40px;
+    font-family: 'VT323', monospace;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.ct-left{
+    width: 24vw;
+}
+.ct-left h4{
+    display: flex;
+    font-size: 2rem;
+}
+.ct-left h4 span{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ct-left p{
+    margin: 30px 10px;
+    font-size: 1.2rem;
+    font-family: 'Advent Pro', sans-serif;
+}
+.ct-left .ct-form {
+    display: flex;
+    justify-content: space-evenly;
+}
+.ct-left .ct-form input{
+    border: .1px solid  var(--navSpecial);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background:none;
+    outline: none;
+    font-family: 'Advent Pro', sans-serif;
+    padding: 14px 20px;
+    color: var(--navIcons);
+    padding: 1rem;
+}   
+.ct-left .ct-form button{
+    border-radius: 10px;
+    padding: 12px 20px;
+    outline: none;
+    border: none;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: 1px solid var(--navSpecial);
+    color: var(--navSpecial);
+    background:none;
+
+}
+.ct-left .ct-form button:hover{
+    color: var(--navIcons);
+    background-color: var(--navSpecial);
+}
+.ct-right{
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ct-right .ct-bx h4{
+    font-size: 2rem;
+}
+.ct-right .ct-bx ul{
+    list-style: none;
+    padding: 1vmax;
+}
+.ct-right .ct-bx ul li{
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: var(--dark-icon-f);
+}
+
+/* --------footer------- */
+footer{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 3vmax 0;
+}
+footer p{
+    font-family: 'Advent Pro', sans-serif;
+}
+footer .f-icon{
+    width: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+.f-icon span{
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--navSpecial);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.f-icon span i{
+    color: var(--navSpecial);
+    font-size: 1.2rem;
+}
+.f-icon span:hover{
+    /* background-color: var(--navIcons); */
+    border-color: var(--navIcons);
+}
+
+/* ------hamburger menu */
+.hamburger{
+    align-self: center;
+    font-size: 2rem;
+    margin-right: 10px;
+    display: none;
+    
+}
+.hamburger i{
+    cursor: pointer;
+    color:var(--navSpecial)
+}
+
+
+
+/* 
+----------Fonts-------- 
+
+font-family: 'Advent Pro', sans-serif;
+font-family: 'Alumni Sans Collegiate One', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Blaka Hollow', cursive;
+font-family: 'Bungee Shade', cursive;
+font-family: 'Bungee Spice', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Chewy', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Dawning of a New Day', cursive;
+font-family: 'DynaPuff', cursive;
+font-family: 'Fasthand', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Inconsolata', monospace;
+font-family: 'Inspiration', cursive;
+font-family: 'Island Moments', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Marck Script', cursive;
+font-family: 'Megrim', cursive;
+font-family: 'Mukta', sans-serif;
+font-family: 'Nabla', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quantico', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Rubik Burned', cursive;
+font-family: 'Rubik Distressed', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Silkscreen', cursive;
+font-family: 'Splash', cursive;
+font-family: 'VT323', monospace;
+font-family: 'Yellowtail', cursive;
+font-family: 'Yuji Mai', serif;
+*/
